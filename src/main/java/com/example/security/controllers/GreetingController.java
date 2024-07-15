@@ -27,4 +27,12 @@ public class GreetingController {
         return "This page is accessible to role admin";
     }
 
+    /*
+    @PreAuthorize("hasRole('PRIVILEGED')")
+    @GetMapping("/privilegedPage")
+    public String privilegedLogin(){
+        return "This page is accessible to privileged role";
+    }
+    */
+
 }

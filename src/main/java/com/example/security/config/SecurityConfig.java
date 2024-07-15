@@ -60,7 +60,12 @@ public class SecurityConfig {
                 .password("{noop}admin123")
                 .roles("ADMIN")
                 .build();
-
+        /*
+        UserDetails privilegedUser =  User.withUsername("privilegedUser")
+                .password("{noop}privileged123")
+                .roles("PRIVILEGED")
+                .build();
+        */
         UserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
         jdbcUserDetailsManager.createUser(admin);
         jdbcUserDetailsManager.createUser(user);
